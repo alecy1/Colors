@@ -30,7 +30,7 @@
     <div class="row">
       <div class="col- col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
         <ul class="menu-footer">
-          <li class="menu-li titulo">Contactame</li>
+          <li class="menu-li">Contactar</li>
           <li class="menu-li"><i class="fa fa-phone"></i> 44-48 836 294</li>
           <li class="menu-li"><i class="fa fa-envelope"></i> alecrz_16@hotmail.com</li>
           <li class="menu-li"><i class="fa-github"></i> alecrz_16@hotmail.com</li>
