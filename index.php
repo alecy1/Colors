@@ -5,29 +5,25 @@
 <link id="estilos" rel="stylesheet" href="./style/verdeOscuro.css">
 </head>
 <body>
-  
-	<header class="row header">
+  <header class="row header">
 		<nav class= "col- col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 menuli">
 			<div style="textDecoration:none;color:black;margin-left:1rem">
 				<img class="logo" src="./imagenes/pixelPay.png" alt="PIXELPAY"/>
 			</div>
 		</nav>
 	</header>
-
   <div class="container">
-    
-      <div class="row">
+    <div class="row">
         <h4>Selecciona la plantilla</h4>
         <button class="button button1" onclick="document.location='./formvd.php'" >Plantilla Verde oscuro</button>
-        <h4></h4>
+        <br/>
         <button class="button button1" onclick="document.location='./formrosa.php'" >Plantilla Rosa</button>
-        <h4></h4>
+        <br/>
         <button class="button button1" onclick="document.location='./formnaranja.php'" >Plantilla naranja</button>
-        <h4></h4>
+        </br>
         <button class="button button1" onclick="document.location='./formverde.php'" >Plantilla Verde claro</button>
       </div>
   </div><br>
-
   <footer class="footer">
     <div class="row">
       <div class="col- col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
