@@ -2,6 +2,8 @@
 <html>
 <head>
 <title>Lista de quehaceres</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link id="estilos" rel="stylesheet" href="./style/verdeOscuro.css">
 </head>
 <body>
@@ -29,9 +31,9 @@
       <div class="col- col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
         <ul class="menu-footer">
           <li class="menu-li titulo">Contactame</li>
-          <li class="menu-li">Telefono: 44-48 836 294</li>
-          <li class="menu-li">Email: alecrz_16@hotmail.com</li>
-          <li class="menu-li">WhatsApp: 48-32 456 944</li>
+          <li class="menu-li"><i class="fa fa-phone"></i> 44-48 836 294</li>
+          <li class="menu-li"><i class="fa fa-envelope"></i> alecrz_16@hotmail.com</li>
+          <li class="menu-li"><i class="fa-github"></i> alecrz_16@hotmail.com</li>
           <li class="menu-li">Horario telefonico: Lun a Vie 9:00h a 18:00h</li>
         </ul>
       </div>
