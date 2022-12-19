@@ -15,33 +15,47 @@ para lograr el registro se utiliza la codificacion del archivo insertaInfo.php*/
         xhttp.send();
       }
   }
- 
 
-/*El objetivo de la funcion retornaInformacion(), es mostrar la lista de items registrados.
-Esta funcion se comunica con el archivo retornarInfo.php*/
-  function retornaInformacion() {
-    var lista = document.getElementById("mostrar").value;
-      if (lista.length == 0) { 
-        document.getElementById("mostrarInformacion").innerHTML = "";
-        return;
-      }
-      const xhttp = new XMLHttpRequest();
-      xhttp.onload = function() {
-        document.getElementById("mostrarInformacion").innerHTML = this.responseText;
-      }
-      xhttp.open("POST", "./funcionalidadPHP/retornarInfo.php?q="+lista);
-      xhttp.send();
-  }
+/*El objetivo de la funcion mostrarLista(), es mostrar la lista de items registrados. */
+  function mostrarLista(){
+  var opcion = document.getElementById("mostrar").value;
+  fetch("./funcionalidadPHP/retornarInfoB.php",{method:"POST",body:opcion})
+    .then(res => res.text())
+    .then(respuesta => {
+      document.getElementById("formItems").innerHTML= respuesta;
+    });
+    return false;
+}
 
-/*El objetivo de la funcion eliminaLista(), es eliminar los registros de los items, 
-para lograr esto la funcion, llama al archivo retornarInfo.php*/
-  function eliminaLista(){
-    var elimina = document.getElementById("eliminar").value;
-    const xhttp = new XMLHttpRequest();
-    xhttp.onload = function(){
-      document.getElementById("mostrarInformacion").innerHTML=this.responseText;
+/*El objetivo de la funcion es seleccionar todos los checkbox*/
+  function seleccionar() {
+    var seltodo = document.getElementById("seltodo");
+    var text = document.getElementById("mensajeST");
+    var form = document.forms["formItems"];
+    var i;
+    if (seltodo.checked == true){
+      for (i=0; i < form.length; i++) {
+        form.elements.item(i).checked=true;
+      }
+      //text.style.display = "block";
+    } else {
+      for (i=0; i < form.length; i++) {
+        form.elements.item(i).checked=false;
+      }
+      //text.style.display = "none";
     }
-    xhttp.open("POST", "./funcionalidadPHP/retornarInfo.php?q="+elimina);
-    xhttp.send();
   }
 
+/*El objetivo de la funcion, es eliminar items de la lista. Se envio un POST a retornarInfoA.php*/
+function eliminaCheckbox(){
+  var form = document.getElementById("formItems");
+  var opcion = "eliminar";
+  item = new FormData(form);
+  fetch("./funcionalidadPHP/retornarInfoA.php",{method:"POST",body:item,opcion:"eliminar"})
+  .then(res => res.text())
+  .then(respuesta => {
+    document.getElementById("retornaMensaje").innerHTML= respuesta;
+    mostrarLista();
+  });
+  return false;
+}
