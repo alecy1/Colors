@@ -244,7 +244,7 @@ label{
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
-
+.buttonML{width: 50%;}
 .buttonMostrarLista{box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
 .buttonEliminarSel{
 	background-color: #3b917e; /* Green */
@@ -277,4 +277,9 @@ color:#4cb69f;
 }
 .titulo2{
 	color:#4cb69f;
+}
+.botonCheckbox{
+	height: 15px;
+  width: 15px;
+  background-color: #eee;
 }
