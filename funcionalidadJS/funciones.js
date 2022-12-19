@@ -19,7 +19,7 @@ para lograr el registro se utiliza la codificacion del archivo insertaInfo.php*/
 /*El objetivo de la funcion mostrarLista(), es mostrar la lista de items registrados. */
   function mostrarLista(){
   var opcion = document.getElementById("mostrar").value;
-  fetch("./funcionalidadPHP/retornarInfoB.php",{method:"POST",body:opcion})
+  fetch("./funcionalidadPHP/retornarItems.php",{method:"POST",body:opcion})
     .then(res => res.text())
     .then(respuesta => {
       document.getElementById("formItems").innerHTML= respuesta;
@@ -51,7 +51,7 @@ function eliminaCheckbox(){
   var form = document.getElementById("formItems");
   var opcion = "eliminar";
   item = new FormData(form);
-  fetch("./funcionalidadPHP/retornarInfoA.php",{method:"POST",body:item,opcion:"eliminar"})
+  fetch("./funcionalidadPHP/eliminaItems.php",{method:"POST",body:item,opcion:"eliminar"})
   .then(res => res.text())
   .then(respuesta => {
     document.getElementById("retornaMensaje").innerHTML= respuesta;
