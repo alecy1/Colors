@@ -35,12 +35,19 @@
         </div>
       </form><br>
       <div class="row">
-        <div class="col- col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-          <input class="buttonMostrarLista" type="submit" id="mostrar" onclick="retornaInformacion(this.value)" value="mostrar"/>
-            <ol id="mostrarInformacion"></ol>
-        </div>
-        <div class="col- col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-          <input class="buttonMostrarLista" class="eliminar" type="submit" id="eliminar" onclick="eliminaLista(this.value)" value="eliminar" />
+        <div class="col- col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+          <label style="font-size: medium;">Da clic en el siguiente boton, para ver los items.</label><br>
+          <button class="buttonMostrarLista buttonML" type="submit" id="mostrar" onclick="mostrarLista(this.value)" value="mostrar">
+            Mostrar Lista de quehaceres
+          </button>
+            <br><h4 id="retornaMensaje"></h4>
+            <p id="mensajeST" style="display:none">Selecciono todos los items</p>
+            <!-- Este checkbox pérmite seleccionar y deseleccionar los checkbox del form. -->
+            <input type="checkbox" name="seltodo" id="seltodo" onclick="seleccionar()"/ class="botonCheckbox"><label style="font-size:small;">Selecciona todos los items </label>
+            <!-- Form para desplegar lista de quehaceres -->
+            <form id="formItems" method="post" onsubmit="return eliminaCheckbox()">
+              
+            </form>
         </div>
       </div>
   </div>
