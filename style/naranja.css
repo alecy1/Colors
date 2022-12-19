@@ -250,3 +250,8 @@ color:#ff3300;
 .titulo2{
 	color:#ff3300;
 }
+.botonCheckbox{
+	height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
